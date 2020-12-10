@@ -1,0 +1,58 @@
+local paramsutil = require "paramsutil"
+local constructionutil = require "constructionutil"
+
+function data()
+
+	local config = {
+		streetTypes = { "street/brooklyn/Brooklyn_road.lua" , "street/brooklyn/Brooklyn_deck.lua" },
+	}
+
+return { 
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Brooklyn Bridge, NYC"),			
+		description = _("Brooklyn Bridge, NYC.  Available from 1883")
+	},
+	availability = { yearFrom = 1883 },
+	buildMode = "SINGLE",
+	categories = { "AV_build" },
+	order = 102,
+	skipCollision = true,
+	autoRemovable = false,
+--	params = { },					--> Is this statement clearing the params?
+
+	updateFn = function(params)
+		local result = { }
+
+		result.models = { {
+			id = "1_av002_1.mdl",
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }
+		}, }
+		result.edgelists = {			---> define snapnodes at ends
+			{
+			type = "STREET",
+--			edgeType = "BRIDGE",
+			params = { type = "street/brooklyn/Brooklyn_road.lua", tramTrackType = "NO" }, ---> NOTE This could change, would need to config Brooklyn_road to accept tram tracks 			
+			edgeTypeName = "street/brooklyn/Brooklyn_road.lua",
+
+			--> Note coordinates from Blender are x,y,z
+			---> NOTE pointer is 0,0,0, and coincides with model origin
+
+			edges = {									--> Note tangents are relative x,y,z, not absolute
+				{ { -13.300, 687.0, 36.5, }, { .0, -915.0, .0, } },		--> Manhattan to Brooklyn, first edge
+				{ { -13.300, -228.0, 36.5, }, { .0, -915.0, .0, } }, 	--> Brooklyn end
+				{ { 9.800, -228.000, 36.0, }, { .0, 915.0, .0, } },		--> Brooklyn to Manhattan
+				{ { 9.800, 687.000, 36.0, }, { .0, 915.0, .0, } }, },	--> Manhattan end
+			snapnodes = { 0, 1, 2, 3 },
+		},
+
+		}
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		result.cost = 0
+		return result
+	end
+}
+end

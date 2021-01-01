@@ -1,0 +1,39 @@
+			--> intermediate edges to match the bridge slope
+				{ { -8.9, 587.0, 32.7, }, { .0, -100.0, .0, } },	--> Manhattan to Brooklyn, first section, slope 1%
+				{ { -8.9, 487.0, 35.2, }, { .0, -100.0, .0, } }, 	--> First section ends
+
+				{ { -8.9, 487.0, 35.2, }, { .0, -80.3, .0, } },	--> Manhattan to Brooklyn, second section, slope 1%
+				{ { -8.9, 406.7, 36.5, }, { .0, -80.3, .0, } }, 	--> Second section ends
+				
+				{ { -8.9, 406.7, 36.5, }, { .0, -53.7, .0, } },	--> Manhattan to Brooklyn, third section, slope 0,75%
+				{ { -8.9, 357.0, 37.6, }, { .0, -53.7, .0, } }, 	--> Third section ends
+								
+				{ { -8.9, 357.0, 37.6, }, { .0, -83.0, .0, } },	--> Manhattan to Brooklyn, fourth section, slope 0,5%
+				{ { -8.9, 274.0, 39.0, }, { .0, -83.0, .0, } }, 	--> Fourth section ends
+			
+				{ { -8.9, 274.0, 39.0, }, { .0, -41.4, .0, } },	--> Manhattan to Brooklyn, fifth section, slope 0,25%
+				{ { -8.9, 232.6, 39.7, }, { .0, -41.4, .0, } }, 	--> Fifth section ends
+
+				{ { -8.9, 232.6, 39.7, }, { .0, -41.4, .0, } },	--> Manhattan to Brooklyn, sixth section, slope 0,0%
+				{ { -8.9, 191.2, 40.2, }, { .0, -41.4, .0, } }, 	--> Sixth section ends
+
+				{ { -8.9, 191.2, 40.2, }, { .0, -41.4, .0, } },	--> Manhattan to Brooklyn, seventh section, slope 0,0%
+				{ { -8.9, 149.8, 40.7, }, { .0, -41.4, .0, } }, 	--> Seventh section ends
+
+				{ { -8.9, 149.8, 40.7, }, { .0, -41.4, .0, } },	--> Manhattan to Brooklyn, eighth section, slope -0,25%
+				{ { -8.9, 108.4, 41.1, }, { .0, -41.4, .0, } }, 	--> Eighth section ends
+
+				{ { -8.9, 108.4, 41.1, }, { .0, -82.7, .0, } },	--> Manhattan to Brooklyn, ninth section, slope -0,5%
+				{ { -8.9, 25.7, 41.1, }, { .0, -82.7, .0, } }, 	--> ninth section ends
+
+				{ { -8.9, 25.7, 41.1, }, { .0, -83.3, .0, } },	--> Manhattan to Brooklyn, tenth section, slope -0,75%
+				{ { -8.9, -57.6, 40.0, }, { .0, -83.3, .0, } }, 	--> Tenth section ends
+
+				{ { -8.9, -57.6, 40.0, }, { .0, -80.0, .0, } },	--> Manhattan to Brooklyn, tenth section, slope -0,75%
+				{ { -8.9, -137.6, 38.7, }, { .0, -80.0, .0, } }, 	--> Tenth section ends
+
+				{ { -8.9, -137.6, 38.7, }, { .0, -80.0, .0, } },	--> Manhattan to Brooklyn, tenth section, slope -0,75%
+				{ { -8.9, -217.6, 37.4, }, { .0, -80.0, .0, } }, 	--> Tenth section ends
+			--> Brooklyn end, snapnode 26,27
+				{ { -8.9, -217.6, 37.4, }, { .0, -80.0, .0, } },	--> Manhattan to Brooklyn, tenth section, slope -0,75%
+				{ { -8.9, -297.6, 36.1, }, { .0, -80.0, .0, } }, 	--> Tenth section ends

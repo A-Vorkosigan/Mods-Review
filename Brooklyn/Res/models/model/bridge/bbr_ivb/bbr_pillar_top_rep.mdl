@@ -1,0 +1,32 @@
+local vec3 = require "vec3"
+local transf = require "transf"
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 1.5, 4, -2.8499999046326, },
+		bbMin = { -1.5, 0, -8, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 1.5, 2, 2.5750000476837, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 600,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end
